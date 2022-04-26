@@ -2,8 +2,7 @@
 
 Starter template for simple usage of:
 
-- [![Vue.js](https://img.shields.io/badge/VueJS-%2335495e.svg?style=flat&logo=vuedotjs&logoColor=%234FC08D)](https://next.vuetifyjs.com)
-
+- [![Vue.js](https://img.shields.io/badge/VueJS-%2335495e.svg?style=flat&logo=vuedotjs&logoColor=%234FC08D)](https://vuejs.org)
 - [![Vuetify](https://img.shields.io/badge/Vuetify-1867C0?style=flat&logo=vuetify&logoColor=AEDDFF)](https://next.vuetifyjs.com)
 - [![TypeScript](https://img.shields.io/badge/Typescript-%23007ACC.svg?style=flat&logo=Typescript&logoColor=white)](https://www.typescriptlang.org/)  
 - [![Pug](https://img.shields.io/badge/Pug-FFF?style=flat&logo=pug&logoColor=A86454)](https://pugjs.org)  
