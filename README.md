@@ -13,3 +13,81 @@ Starter template for simple usage of:
 You can start to enhance your development environment with a set of solutions like SFC for simple layouts or TSX components for complex layouts and UI logic, SASS styles instead of CSS, Pug instead of HTML...
 
 >Since Vuetify 3 is still under development this repo follow the same path
+
+# **Vue Class Component**
+```html
+<template>
+  <v-app ref="app">
+    <v-app-bar color="grey-lighten-2" name="app-bar" class="justify-center">
+      <div class="d-flex justify-center align-center w-100">
+        <v-btn @click="print('app-bar')">Get data</v-btn>
+      </div>
+    </v-app-bar>
+    <v-navigation-drawer color="grey-darken-2" permanent name="drawer">
+      <div class="d-flex justify-center align-center h-100">
+        <v-btn @click="print('drawer')">Get data</v-btn>
+      </div>
+    </v-navigation-drawer>
+    <v-main>
+      <GreetTSX/>
+    </v-main>
+  </v-app>
+</template>
+
+<style lang="sass">
+#app 
+  font-family: Avenir, Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-align: center
+  color: #2c3e50
+  margin-top: 60px
+</style>
+
+<script lang="ts">
+import GreetTSX from './components/greet';
+import { Ref, Vue, Options } from 'vue-property-decorator';
+import { VApp } from 'vuetify/components';
+import { Person } from './models/base';
+
+@Options({
+  components: {GreetTSX}
+})
+export default class App extends Vue {
+  @Ref()
+  app!: VApp
+
+  text = 'prueba';
+
+  mounted(){
+    console.log(new Person(0, 'Pedro', 'Gil'))
+  }
+
+  print(key: string) {
+    alert(JSON.stringify(this.app.getLayoutItem(key), null, 2))
+  }
+
+}
+</script>
+```
+
+# **TSX Class Component**
+
+```tsx
+import { Vue } from "vue-property-decorator";
+import { h } from 'vue'
+import { VCard, VTextField } from "vuetify/components";
+import { setup } from "vue-class-component";
+
+
+export default class Greet extends Vue {
+    text = 'Prueba'
+    render() {
+        return <VCard>
+            {this.text}
+            <VTextField v-model={this.text}/>
+        </VCard>
+    }
+}
+```
+
