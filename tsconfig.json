@@ -2,29 +2,20 @@
   "compilerOptions": {
     "target": "esnext",
     "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
-    "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
-    "types": [
-      "vite/client",
-      "vuetify"
-    ]
+    "skipLibCheck": true
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "tsconfig.node.json" }]
 }
